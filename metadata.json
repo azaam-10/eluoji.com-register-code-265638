@@ -1,0 +1,5 @@
+{
+  "name": "Mine Account Clone",
+  "description": "A high-fidelity 1:1 mobile web application clone of the provided user profile interface, featuring a custom header gradient, crypto wallet actions, and a persistent bottom navigation bar.",
+  "requestFramePermissions": []
+}
