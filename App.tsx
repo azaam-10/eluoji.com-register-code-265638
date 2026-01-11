@@ -8,7 +8,7 @@ import { Copy, CheckCircle2 } from 'lucide-react';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Mine');
-  const [modalStep, setModalStep] = useState<number>(1); // 1 to 4
+  const [modalStep, setModalStep] = useState<number>(1); // 1 to 4, 0 to close
   const [walletAddress, setWalletAddress] = useState('');
   const [copied, setCopied] = useState<string | null>(null);
 
@@ -32,7 +32,7 @@ const App: React.FC = () => {
         <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
       </div>
 
-      {/* Modal Overlay - Interaction disabled on background to prevent exit */}
+      {/* Modal Overlay */}
       {modalStep > 0 && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/30 backdrop-blur-[1.5px] animate-in fade-in duration-300">
           <div className="bg-white w-full rounded-2xl p-6 shadow-2xl flex flex-col text-right dir-rtl animate-in zoom-in-95 duration-300" style={{ direction: 'rtl' }}>
